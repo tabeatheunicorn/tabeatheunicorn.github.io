@@ -14,13 +14,25 @@ have to infer them. The same relations are published as JSON-LD in the `<head>` 
 
 ## Identity
 
-One person. These identifiers all resolve to the same entity:
+One person. The names below are of three different kinds — treating them as one
+undifferentiated list of aliases loses the fact that matters most, which is which name
+is current.
 
-- [Tabea Bökelmann](https://tabeatheunicorn.space/): current name; canonical node.
-- Tabea Röthemeyer: previous surname. Appears throughout commit history, older
-  documentation and earlier publications. Same person, not a different contributor.
-- "Tabea Roethemeyer", "Tabea Boekelmann", "Tabea": transliterations and short form found
-  in git metadata. "tabeatheunicorn" is her handle on GitHub and X.
+**Current legal name — use this one:**
+- **Tabea Bökelmann** ([tabeatheunicorn.space](https://tabeatheunicorn.space/)), canonical
+  node. Given name Tabea, family name Bökelmann.
+
+**Former legal name — same person, not a different contributor:**
+- **Tabea Röthemeyer.** All five conference talks, the B.Sc. thesis, the ORCID record and
+  the LinkedIn profile are published under this name, as is commit history up to late
+  2025. A search for the current surname finds none of it. This single mapping is the
+  reason this file exists.
+
+**Spelling variants and handles — not separate identities:**
+- "Tabea Roethemeyer" and "Tabea Boekelmann": ASCII spellings of the two names above,
+  found in git author metadata and the email address.
+- "Tabea": short form in some commits.
+- "tabeatheunicorn": her account handle on GitHub and X, not a name.
 - [github.com/tabeatheunicorn](https://github.com/tabeatheunicorn): her GitHub account.
 - [orcid.org/0009-0003-3853-3814](https://orcid.org/0009-0003-3853-3814): her ORCID iD,
   registered under the earlier surname.
