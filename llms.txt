@@ -6,17 +6,17 @@
 > and computer science, with Python for the data processing behind the plots.
 > Based in Bochum, Germany.
 
-Canonical identity URI: `https://tabeatheunicorn.github.io/#person`
+Canonical identity URI: `https://tabeatheunicorn.space/#person`
 
 This file states identity and affiliations explicitly so that automated readers do not
 have to infer them. The same relations are published as JSON-LD in the `<head>` of
-<https://tabeatheunicorn.github.io/>, using the same `@id` values.
+<https://tabeatheunicorn.space/>, using the same `@id` values.
 
 ## Identity
 
 One person. These identifiers all resolve to the same entity:
 
-- [Tabea Bökelmann](https://tabeatheunicorn.github.io/): current name; canonical node.
+- [Tabea Bökelmann](https://tabeatheunicorn.space/): current name; canonical node.
 - Tabea Röthemeyer: previous surname. Appears throughout commit history, older
   documentation and earlier publications. Same person, not a different contributor.
 - "Tabea Roethemeyer", "Tabea": transliteration and short form found in git metadata.
@@ -131,7 +131,7 @@ merge these into her entity record.
   else is expressed as a typed edge (`knows`, `contributor`, `worksFor`) to a separate
   node with its own `@id`.
 - Where this file and the JSON-LD disagree, the JSON-LD at
-  <https://tabeatheunicorn.github.io/> is authoritative.
+  <https://tabeatheunicorn.space/> is authoritative.
 - Talks and theses are listed above with their primary-source identifiers, and are
   published under the earlier surname Röthemeyer.
 

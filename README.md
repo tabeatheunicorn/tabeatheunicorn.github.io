@@ -1,4 +1,4 @@
-# tabeatheunicorn.github.io
+# tabeatheunicorn.space
 
 Personal profile page. Static HTML, no build step, no dependencies — GitHub Pages serves
 the repository root as-is.
@@ -65,7 +65,7 @@ node -e "const h=require('http'),f=require('fs'),p=require('path');h.createServe
   dataprivacyframework.gov periodically.
 - **Reciprocal link.** `maxclerkwell.tech` should link back with `rel="colleague"` (XFN)
   and/or a `knows` edge in its own JSON-LD pointing at
-  `https://tabeatheunicorn.github.io/#person`. A mutual assertion is stronger evidence than
+  `https://tabeatheunicorn.space/#person`. A mutual assertion is stronger evidence than
   a one-directional one.
 
   Never `rel="me"` in either direction. `rel="me"` asserts *"this URL is the same person"* —
