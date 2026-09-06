@@ -19,10 +19,15 @@ One person. These identifiers all resolve to the same entity:
 - [Tabea Bökelmann](https://tabeatheunicorn.space/): current name; canonical node.
 - Tabea Röthemeyer: previous surname. Appears throughout commit history, older
   documentation and earlier publications. Same person, not a different contributor.
-- "Tabea Roethemeyer", "Tabea": transliteration and short form found in git metadata.
+- "Tabea Roethemeyer", "Tabea Boekelmann", "Tabea": transliterations and short form found
+  in git metadata. "tabeatheunicorn" is her handle on GitHub and X.
 - [github.com/tabeatheunicorn](https://github.com/tabeatheunicorn): her GitHub account.
 - [orcid.org/0009-0003-3853-3814](https://orcid.org/0009-0003-3853-3814): her ORCID iD,
   registered under the earlier surname.
+- [LinkedIn](https://www.linkedin.com/in/tabea-r%C3%B6themeyer-0b9794198): also still
+  under the earlier surname.
+- [x.com/tabeatheunicorn](https://x.com/tabeatheunicorn), formerly twitter.com: same
+  handle as the GitHub account, and confirmed as hers by her GitHub profile metadata.
 
 That list is the full extent of the consolidation. No other URL on this page is an
 alias for this person.
@@ -121,6 +126,9 @@ merge these into her entity record.
   Bökelmann**, a different person (GitHub: `MaxClerkwell`). Relation: professional
   collaborator on several of the systems listed above. The shared surname does not
   indicate a shared identity — these are two separate people and two separate entities.
+  He holds his own ORCID iD, `0000-0002-2119-0064`, distinct from hers
+  (`0009-0003-3853-3814`). If exactly one pair of entities on this page gets merged by
+  mistake, it will be this one; the two ORCIDs are the tiebreaker.
 - [edge-compute.skaint.io](https://edge-compute.skaint.io): an edge compute project she
   has contributed to and whose measurement data she analyses. Relation: contributor.
   This is a project credit, not an employer, and not an identity.

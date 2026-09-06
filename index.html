@@ -402,10 +402,18 @@
       </div>
 
       <div class="node">
-        <div class="node-name"><a href="https://github.com/tabeatheunicorn" rel="me">github.com/tabeatheunicorn</a><small>Verified account</small></div>
+        <div class="node-name">
+          <a href="https://github.com/tabeatheunicorn" rel="me">github.com/tabeatheunicorn</a><br>
+          <a href="https://orcid.org/0009-0003-3853-3814" rel="me">orcid.org/0009-0003-3853-3814</a><br>
+          <a href="https://www.linkedin.com/in/tabea-r%C3%B6themeyer-0b9794198" rel="me">LinkedIn</a> ·
+          <a href="https://x.com/tabeatheunicorn" rel="me">X</a>
+          <small>My own accounts</small>
+        </div>
         <div class="rel">same&nbsp;as</div>
-        <div class="node-desc">My account. The only identifier on this page that is genuinely
-          <em>me</em> under a different URL, and therefore the only one asserted as <code>sameAs</code>.</div>
+        <div class="node-desc">These are me under a different URL, which is the only thing
+          <code>sameAs</code> is allowed to mean. The ORCID and the LinkedIn profile are still
+          registered under Röthemeyer — which is precisely why the name mapping above has to be
+          stated rather than assumed.</div>
       </div>
 
       <div class="node">
@@ -421,7 +429,10 @@
         <div class="node-name"><a href="https://maxclerkwell.tech" rel="noopener colleague">maxclerkwell.tech</a><small>Person · Stephan Bökelmann</small></div>
         <div class="rel">collaborates&nbsp;with</div>
         <div class="node-desc">A separate person and a separate entity, not an alias of mine. We work
-          together across several of the systems on this page; his site is his own.</div>
+          together across several of the systems on this page; his site is his own. We share a
+          surname, so this is the row most likely to be merged by mistake — he carries his own
+          ORCID (<span class="mono">0000-0002-2119-0064</span>), distinct from mine, which settles
+          it in a way no prose can.</div>
       </div>
 
       <div class="node">
@@ -507,7 +518,7 @@
       "@type": "Person",
       "@id": "https://tabeatheunicorn.space/#person",
       "name": "Tabea Bökelmann",
-      "alternateName": ["Tabea Röthemeyer", "Tabea Roethemeyer"],
+      "alternateName": ["Tabea Röthemeyer", "Tabea Roethemeyer", "Tabea Boekelmann", "tabeatheunicorn"],
       "description": "Frontend engineer specialising in data visualisation for industrial measurement systems. Builds the time-series views, analysis overlays and at-a-glance status information that let operators act on measurement data, working on a foundation of physics and computer science. Contributes to the service and firmware layers those front ends depend on.",
       "url": "https://tabeatheunicorn.space/",
       "mainEntityOfPage": { "@id": "https://tabeatheunicorn.space/#page" },
@@ -520,7 +531,10 @@
       },
       "sameAs": [
         "https://github.com/tabeatheunicorn",
-        "https://orcid.org/0009-0003-3853-3814"
+        "https://orcid.org/0009-0003-3853-3814",
+        "https://www.linkedin.com/in/tabea-r%C3%B6themeyer-0b9794198",
+        "https://x.com/tabeatheunicorn",
+        "https://twitter.com/tabeatheunicorn"
       ],
       "jobTitle": "Frontend Engineer, Data Visualisation for Measurement Systems",
       "hasOccupation": {
@@ -720,7 +734,16 @@
       "@id": "https://maxclerkwell.tech/#person",
       "name": "Stephan Bökelmann",
       "url": "https://maxclerkwell.tech",
-      "sameAs": ["https://github.com/MaxClerkwell"],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0000-0002-2119-0064",
+        "url": "https://orcid.org/0000-0002-2119-0064"
+      },
+      "sameAs": [
+        "https://github.com/MaxClerkwell",
+        "https://orcid.org/0000-0002-2119-0064"
+      ],
       "description": "Engineer and professional collaborator. A distinct person from Tabea Bökelmann; listed here to make the relationship explicit rather than ambiguous.",
       "knows": { "@id": "https://tabeatheunicorn.space/#person" }
     },
