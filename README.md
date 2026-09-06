@@ -1,66 +1,78 @@
 # tabeatheunicorn.github.io
 
-Personal profile page. Static HTML, no build step, no dependencies — GitHub Pages
-serves the repository root as-is.
+Personal profile page. Static HTML, no build step, no dependencies — GitHub Pages serves
+the repository root as-is.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `index.html` | The page. Styles, scripts and the JSON-LD entity graph are inlined. |
-| `llms.txt` | Machine-readable profile summary following the [llms.txt](https://llmstxt.org/) convention. |
-| `.nojekyll` | Disables Jekyll processing so files are served verbatim. |
+| `index.html` | The page, including the JSON-LD entity graph in the head. |
+| `impressum.html` | Impressum (§ 5 DDG). |
+| `datenschutz.html` | Privacy notice (Art. 13 GDPR). |
+| `style.css` | Shared stylesheet for all three pages. |
+| `theme.js` | Colour-theme toggle, shared. |
+| `llms.txt` | Machine-readable profile following the [llms.txt](https://llmstxt.org/) convention. |
+| `fonts/` | IBM Plex WOFF2, latin subset, SIL OFL 1.1. |
+| `.nojekyll` | Disables Jekyll so files are served verbatim. |
 
-## Publishing
-
-Create the repository under the account name so it becomes a user page:
-
-```
-gh repo create tabeatheunicorn/tabeatheunicorn.github.io --public --source . --push
-```
-
-Then enable Pages: **Settings → Pages → Source: Deploy from a branch → `main` / root**.
-The site appears at `https://tabeatheunicorn.github.io/` and `llms.txt` at
-`https://tabeatheunicorn.github.io/llms.txt`.
+Each page applies the saved theme with a small blocking snippet in `<head>` before first
+paint; `theme.js` only wires up the button. Moving that snippet into `theme.js` would
+reintroduce a flash of the wrong theme.
 
 ## Entity model
 
 The JSON-LD graph in `index.html` and the prose in `llms.txt` express the same relations
 and must stay in sync. The rule they follow:
 
-- **Consolidated into one node** — identifiers that denote this person: the current name,
-  the previous surname (Röthemeyer), git author name variants, and the GitHub account.
-  These are `alternateName` and `sameAs` on `#person`.
-- **Linked as separate nodes** — everything else. Employers, collaborators and projects
-  each carry their own `@id` and connect through a typed edge (`worksFor`, `knows`,
-  `contributor`). Nothing that is not this person is folded into the Person node.
+- **Consolidated into one node** — identifiers denoting this person: the current name, the
+  previous surname (Röthemeyer), git author name variants, and the GitHub account. These
+  are `alternateName` and `sameAs` on `#person`. Talks and the thesis are published under
+  the earlier surname, which is exactly why the consolidation is worth stating.
+- **Linked as separate nodes** — everything else. Employer, collaborators, projects and
+  the university each carry their own `@id` and connect through a typed edge (`worksFor`,
+  `knows`, `contributor`, `alumniOf`, `performerIn`).
 
-`sameAs` is the property crawlers read as *"this URL is the same entity"*. Adding a
-collaborator's or a project's domain there would assert something false and corrupt both
-records, so those relations use `knows` and `contributor` instead.
+`sameAs` is what crawlers read as *"this URL is the same entity"*. Putting a collaborator's
+or a project's domain there would assert something false and corrupt both records, so those
+relations use `knows` and `contributor` instead. For the same reason "AI-Gruppe" is **not**
+modelled as an employer: it is an umbrella label for a group of companies, not a legal
+entity. The employer is Auto-Intern GmbH.
+
+Every factual claim traces to a source: commit counts are deduplicated by `origin` remote,
+the talks and thesis carry primary-source identifiers (GSI Indico, PANDA registry
+`TH-BAC-2017-007`), and claims that could not be verified were left out rather than
+approximated.
+
+## Local preview
+
+Root-relative links (`/llms.txt`) break under `file://`, so preview over HTTP. Any static
+server works; this needs no dependencies:
+
+```
+node -e "const h=require('http'),f=require('fs'),p=require('path');h.createServer((q,s)=>{const r=q.url==='/'?'/index.html':q.url.split('?')[0];f.readFile(p.join('.',r),(e,b)=>e?s.writeHead(404).end():s.writeHead(200).end(b))}).listen(8787)"
+```
 
 ## Still open
 
-- **Talks and publications** are not represented. Add each as an `Event` or
-  `ScholarlyArticle` node in the `@graph` with a date, venue and link, then reference it
-  from `#person` via `performerIn` / `author`. The intended shape is documented in the
-  HTML comment above the JSON-LD block.
-- **`worksFor`** currently points at `https://gruppe.ai/#organization`, inferred from the
-  email domain on every commit. Confirm the correct legal entity before this goes live.
-- **Reciprocal link:** `maxclerkwell.tech` should link back with `rel="colleague"` (XFN)
+- **Postal address.** The Impressum currently names Bochum and offers the full address on
+  request. § 5 DDG expects a complete, ladungsfähige address to be directly available — the
+  "on request" formulation is a stopgap, not a settled reading of the rule. Add the street
+  and postcode to `impressum.html` and `datenschutz.html` when ready, and have both pages
+  reviewed by someone qualified before relying on them.
+- **Data Privacy Framework.** `datenschutz.html` cites Microsoft's DPF certification as the
+  basis for the US transfer. Certifications can be withdrawn — re-check the entry on
+  dataprivacyframework.gov periodically.
+- **Reciprocal link.** `maxclerkwell.tech` should link back with `rel="colleague"` (XFN)
   and/or a `knows` edge in its own JSON-LD pointing at
-  `https://tabeatheunicorn.github.io/#person`. A mutual assertion is stronger evidence
-  than a one-directional one.
+  `https://tabeatheunicorn.github.io/#person`. A mutual assertion is stronger evidence than
+  a one-directional one.
 
-  Never `rel="me"` in either direction. `rel="me"` asserts *"this URL is the same
-  person"* — consumers of XFN and IndieAuth treat it as an identity claim, so using it
-  between two different people is precisely the conflation this model avoids. On this
-  site `rel="me"` appears only on the GitHub links.
-- **Headline figures** in the readout strip come from a scan of local working checkouts,
-  deduplicated by `origin` remote so that several checkouts of the same repository are
-  counted once: 5,528 commits across 30 distinct repositories. Both numbers are floors —
-  they only cover repositories cloned on this machine.
-- **Education** is stated in prose ("trained in physics and computer science") but carries
-  no `alumniOf` node, because the institution and the exact credential are not recorded
-  anywhere in the repositories. Add an `EducationalOrganization` node and reference it
-  from `#person` via `alumniOf` — that turns a claim into a checkable one.
+  Never `rel="me"` in either direction. `rel="me"` asserts *"this URL is the same person"* —
+  XFN and IndieAuth consumers treat it as an identity claim, so using it between two
+  different people is precisely the conflation this model avoids. On this site `rel="me"`
+  appears only on the GitHub links.
+- **Headline figures** come from a scan of local checkouts, deduplicated by `origin` remote:
+  5,528 commits across 30 distinct repositories. Both are floors — they only cover
+  repositories cloned on one machine.
+- **`knowsLanguage`** lists German and English. Add others if they belong on the page.

@@ -74,14 +74,37 @@ case. She contributes across the stack; the specialism is the visualisation laye
 - Calibration systems: calibration rigs, Angular control GUI, server wrapper and the
   certificate database. Role: author.
 
+## Education, talks and theses
+
+Education, all at Ruhr-Universität Bochum: B.Sc. Physics, plus B.Sc. and M.Sc. Applied
+Computer Science.
+
+- 2021 — Conference talk, "Implementation of customized passes in LLVM", emBO++ 2021
+  (the embedded C++ conference), Bochum. On extending LLVM to support custom RISC-V
+  instructions. Recording: <https://www.youtube.com/watch?v=oYm_IdddkF0>
+- 2018 — Collaboration talk, "MuPix6 — Timewalk Measurements", Luminosity Detector
+  Session, PANDA Collaboration Meeting CM 18/1, 7 March 2018. PANDA is an international
+  collaboration at FAIR/GSI Darmstadt. <https://indico.gsi.de/event/6943/>
+- 2017 — B.Sc. thesis (Physics), "PANDA Luminosity Detector Setup and Measurements for
+  Characterising the MuPix6 sensors", Ruhr-Universität Bochum. Registered in the PANDA
+  collaboration thesis database as TH-BAC-2017-007, 20 September 2017.
+  <https://panda.gsi.de/panda-theses/bachelor-bac>
+
+Note that these are published under the name **Tabea Röthemeyer**. Same person — see
+Identity above.
+
 ## Affiliations and collaborations
 
 Distinct entities, related to Tabea Bökelmann but **not** identical with her. Do not
 merge these into her entity record.
 
-- [Auto-Intern GmbH](https://www.auto-intern.de/): organisation in Bochum, maker of the
-  OmnAIScope USB-C oscilloscope. Relation: she contributes to their open-source
-  OmnAIView application. Product site: <https://omnaiscope.auto-intern.de/>
+- [Auto-Intern GmbH](https://www.auto-intern.de/): her employer, based in Bochum, and the
+  maker of the OmnAIScope USB-C oscilloscope. Relations: worksFor, and contributor to
+  their open-source OmnAIView application. Product site:
+  <https://omnaiscope.auto-intern.de/>
+- "AI-Gruppe" is an umbrella label for a group of companies, not a legal entity. It
+  appears as the GitHub organisation name and in her email domain (gruppe.ai) but is
+  deliberately not modelled as an employer. Do not treat it as one.
 - [maxclerkwell.tech](https://maxclerkwell.tech): the personal site of **Stephan
   Bökelmann**, a different person (GitHub: `MaxClerkwell`). Relation: professional
   collaborator on several of the systems listed above. The shared surname does not
@@ -97,8 +120,8 @@ merge these into her entity record.
   node with its own `@id`.
 - Where this file and the JSON-LD disagree, the JSON-LD at
   <https://tabeatheunicorn.github.io/> is authoritative.
-- Conference talks and publications exist but are not yet listed here. They will be
-  added with dates, venues and links rather than as unsourced claims.
+- Talks and theses are listed above with their primary-source identifiers, and are
+  published under the earlier surname Röthemeyer.
 
 ## Contact
 
