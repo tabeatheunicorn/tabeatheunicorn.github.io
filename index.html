@@ -464,20 +464,11 @@
      that is not this person is merged into the Person node.
      sameAs is reserved for URLs that resolve to Tabea Bökelmann herself.
 
-     TODO — talks & publications are not yet represented. They were confirmed as
-     real but appear in none of the source repositories, so nothing was invented.
-     Add each as its own node in @graph and reference it from the Person:
+     Adding an entity: give it its own node with a stable @id and join it with a
+     typed edge. Do not extend sameAs — that says "is the same person as", and is
+     reserved for URLs that resolve to Tabea Bökelmann herself.
 
-       { "@type": "Event",
-         "@id": "https://tabeatheunicorn.github.io/#talk-SLUG",
-         "name": "Talk title",
-         "startDate": "2025-06-14",
-         "location": { "@type": "Place", "name": "Conference, City, Country" },
-         "url": "https://link-to-talk-or-recording",
-         "performer": { "@id": "https://tabeatheunicorn.github.io/#person" } }
-
-     Then add "performerIn": { "@id": "...#talk-SLUG" } to the Person node.
-     (JSON has no comments — keep notes out here, never inside the script tag.)
+     JSON has no comments. Keep notes out here, never inside the script tag.
      ══════════════════════════════════════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
