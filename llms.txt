@@ -21,6 +21,8 @@ One person. These identifiers all resolve to the same entity:
   documentation and earlier publications. Same person, not a different contributor.
 - "Tabea Roethemeyer", "Tabea": transliteration and short form found in git metadata.
 - [github.com/tabeatheunicorn](https://github.com/tabeatheunicorn): her GitHub account.
+- [orcid.org/0009-0003-3853-3814](https://orcid.org/0009-0003-3853-3814): her ORCID iD,
+  registered under the earlier surname.
 
 That list is the full extent of the consolidation. No other URL on this page is an
 alias for this person.
@@ -76,12 +78,21 @@ case. She contributes across the stack; the specialism is the visualisation laye
 
 ## Education, talks and theses
 
+ORCID: <https://orcid.org/0009-0003-3853-3814>
+
 Education, all at Ruhr-Universität Bochum: B.Sc. Physics, plus B.Sc. and M.Sc. Applied
 Computer Science.
 
-- 2021 — Conference talk, "Implementation of customized passes in LLVM", emBO++ 2021
-  (the embedded C++ conference), Bochum. On extending LLVM to support custom RISC-V
-  instructions. Recording: <https://www.youtube.com/watch?v=oYm_IdddkF0>
+- 2025 — Conference talk, "Storing more information in your git", KiCon Europe 2025
+  (the KiCad conference), Bochum, 10–12 September 2025.
+  <https://pretalx.kicad.org/kicon-europe-2025/schedule/>
+- 2025 — Conference talk, "Git with Features", emBO++ 2025 (the embedded C++
+  conference), Bochum, 6–7 March 2025. <https://embo.io/>
+- 2021 — Conference talk, "Implementation of customized passes in LLVM", emBO++ 2021,
+  Bochum. On extending LLVM to support custom RISC-V instructions. Recording:
+  <https://www.youtube.com/watch?v=oYm_IdddkF0>
+- 2019 — Conference talk, "KiBOM", KiCon Germany 2019. Bill-of-materials generation for
+  KiCad projects. Recording: <https://www.youtube.com/watch?v=vcrSYO2GPvs>
 - 2018 — Collaboration talk, "MuPix6 — Timewalk Measurements", Luminosity Detector
   Session, PANDA Collaboration Meeting CM 18/1, 7 March 2018. PANDA is an international
   collaboration at FAIR/GSI Darmstadt. <https://indico.gsi.de/event/6943/>
@@ -90,8 +101,9 @@ Computer Science.
   collaboration thesis database as TH-BAC-2017-007, 20 September 2017.
   <https://panda.gsi.de/panda-theses/bachelor-bac>
 
-Note that these are published under the name **Tabea Röthemeyer**. Same person — see
-Identity above.
+All of these are published under the name **Tabea Röthemeyer**, including the ORCID
+record. Same person — see Identity above. This is the concrete reason the name
+consolidation matters: searching the current surname finds none of them.
 
 ## Affiliations and collaborations
 

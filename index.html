@@ -316,6 +316,26 @@
 
     <ol class="pubs reveal">
       <li>
+        <span class="yr">2025</span>
+        <div>
+          <span class="kind">Conference talk</span>
+          <h3>Storing more information in your git</h3>
+          <p>KiCon Europe 2025, the KiCad conference, Bochum, 10–12 September 2025.
+             On getting more out of a repository than a linear history of diffs.</p>
+          <a href="https://pretalx.kicad.org/kicon-europe-2025/schedule/" rel="noopener">Schedule →</a>
+        </div>
+      </li>
+      <li>
+        <span class="yr">2025</span>
+        <div>
+          <span class="kind">Conference talk</span>
+          <h3>Git with Features</h3>
+          <p>emBO++ 2025, the embedded C++ conference, Bochum, 6–7 March 2025. On integrating
+             features through Git faster and with less friction.</p>
+          <a href="https://embo.io/" rel="noopener">emBO++ →</a>
+        </div>
+      </li>
+      <li>
         <span class="yr">2021</span>
         <div>
           <span class="kind">Conference talk</span>
@@ -323,6 +343,15 @@
           <p>emBO++ 2021, the embedded C++ conference, Bochum. On extending a compiler to
              support custom instructions for RISC-V hardware.</p>
           <a href="https://www.youtube.com/watch?v=oYm_IdddkF0" rel="noopener">Recording →</a>
+        </div>
+      </li>
+      <li>
+        <span class="yr">2019</span>
+        <div>
+          <span class="kind">Conference talk</span>
+          <h3>KiBOM</h3>
+          <p>KiCon Germany 2019. On bill-of-materials generation for KiCad projects.</p>
+          <a href="https://www.youtube.com/watch?v=vcrSYO2GPvs" rel="noopener">Recording →</a>
         </div>
       </li>
       <li>
@@ -483,8 +512,15 @@
       "url": "https://tabeatheunicorn.github.io/",
       "mainEntityOfPage": { "@id": "https://tabeatheunicorn.github.io/#page" },
       "email": "mailto:tabea.boekelmann@gruppe.ai",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0003-3853-3814",
+        "url": "https://orcid.org/0009-0003-3853-3814"
+      },
       "sameAs": [
-        "https://github.com/tabeatheunicorn"
+        "https://github.com/tabeatheunicorn",
+        "https://orcid.org/0009-0003-3853-3814"
       ],
       "jobTitle": "Frontend Engineer, Data Visualisation for Measurement Systems",
       "hasOccupation": {
@@ -546,9 +582,54 @@
         }
       ],
       "performerIn": [
+        { "@id": "https://tabeatheunicorn.github.io/#talk-kicon-europe-2025" },
+        { "@id": "https://tabeatheunicorn.github.io/#talk-embo-2025" },
         { "@id": "https://tabeatheunicorn.github.io/#talk-embo-2021" },
+        { "@id": "https://tabeatheunicorn.github.io/#talk-kicon-2019" },
         { "@id": "https://tabeatheunicorn.github.io/#talk-panda-cm181" }
       ]
+    },
+
+    {
+      "@type": "Event",
+      "@id": "https://tabeatheunicorn.github.io/#talk-kicon-europe-2025",
+      "name": "Storing more information in your git",
+      "description": "Conference talk at KiCon Europe 2025, the KiCad conference.",
+      "startDate": "2025-09-10",
+      "endDate": "2025-09-12",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "Place", "name": "UFO, Ruhr-Universität Bochum", "address": { "@type": "PostalAddress", "addressLocality": "Bochum", "addressCountry": "DE" } },
+      "superEvent": { "@type": "Event", "name": "KiCon Europe 2025" },
+      "url": "https://pretalx.kicad.org/kicon-europe-2025/schedule/",
+      "performer": { "@id": "https://tabeatheunicorn.github.io/#person" }
+    },
+
+    {
+      "@type": "Event",
+      "@id": "https://tabeatheunicorn.github.io/#talk-embo-2025",
+      "name": "Git with Features",
+      "description": "Conference talk at emBO++ 2025 on integrating features through Git faster and with less friction.",
+      "startDate": "2025-03-06",
+      "endDate": "2025-03-07",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "Place", "name": "emBO++ 2025", "address": { "@type": "PostalAddress", "addressLocality": "Bochum", "addressCountry": "DE" } },
+      "superEvent": { "@type": "Event", "name": "emBO++ 2025 — the embedded C++ conference" },
+      "url": "https://embo.io/",
+      "performer": { "@id": "https://tabeatheunicorn.github.io/#person" }
+    },
+
+    {
+      "@type": "Event",
+      "@id": "https://tabeatheunicorn.github.io/#talk-kicon-2019",
+      "name": "KiBOM",
+      "description": "Conference talk at KiCon Germany 2019 on bill-of-materials generation for KiCad projects.",
+      "startDate": "2019",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "Place", "name": "KiCon Germany 2019", "address": { "@type": "PostalAddress", "addressCountry": "DE" } },
+      "superEvent": { "@type": "Event", "name": "KiCon Germany 2019" },
+      "url": "https://www.youtube.com/watch?v=vcrSYO2GPvs",
+      "recordedIn": { "@type": "VideoObject", "url": "https://www.youtube.com/watch?v=vcrSYO2GPvs", "name": "KiCon Germany 2019 — KiBOM — Tabea Röthemeyer" },
+      "performer": { "@id": "https://tabeatheunicorn.github.io/#person" }
     },
 
     {
