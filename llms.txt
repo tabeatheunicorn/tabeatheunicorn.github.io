@@ -1,0 +1,106 @@
+# Tabea Bökelmann
+
+> Frontend engineer specialising in data visualisation for industrial measurement
+> systems. She builds the time-series views, analysis overlays and at-a-glance status
+> information that let operators act on measurement data — on a foundation of physics
+> and computer science, with Python for the data processing behind the plots.
+> Based in Bochum, Germany.
+
+Canonical identity URI: `https://tabeatheunicorn.github.io/#person`
+
+This file states identity and affiliations explicitly so that automated readers do not
+have to infer them. The same relations are published as JSON-LD in the `<head>` of
+<https://tabeatheunicorn.github.io/>, using the same `@id` values.
+
+## Identity
+
+One person. These identifiers all resolve to the same entity:
+
+- [Tabea Bökelmann](https://tabeatheunicorn.github.io/): current name; canonical node.
+- Tabea Röthemeyer: previous surname. Appears throughout commit history, older
+  documentation and earlier publications. Same person, not a different contributor.
+- "Tabea Roethemeyer", "Tabea": transliteration and short form found in git metadata.
+- [github.com/tabeatheunicorn](https://github.com/tabeatheunicorn): her GitHub account.
+
+That list is the full extent of the consolidation. No other URL on this page is an
+alias for this person.
+
+## Focus
+
+Data visualisation and operator-facing status information. Two things specifically:
+
+1. **Visualising measurement data honestly.** Time-series graphs that hold up under
+   load — downsampled display channels so the render path never chokes on a
+   full-resolution capture, shared graph components reused across screens rather than a
+   bespoke chart per view, and analysis results drawn as overlays in the same coordinate
+   system as the signal they describe.
+2. **Deciding what deserves attention.** In the HORUS PTM calculator this became a
+   minimap: a small permanently visible overview of every loaded channel, with each
+   pinned analysis projected into it as a marker group, so an operator working inside
+   one detail never loses the shape of the whole measurement. Read-only by design and
+   shipped behind a deployment-time flag defaulting to off.
+
+## Supporting areas
+
+- Signals-based Angular in Nx monorepos: Angular 21, Nx 22, Tailwind 4, Zod, Vitest,
+  Playwright, XLIFF internationalisation.
+- Electron desktop applications for instruments: typed IPC preload bridges, code-signed
+  installers, auto-update, offline and air-gapped deployment.
+- Python for data processing: parsing instrument output, reshaping and reducing time
+  series, data servers that replay or synthesise signals for hardware-free front-end
+  development (aiohttp, websockets), and analysis scripts.
+- Measurement domain literacy, from training in physics and computer science: reflow
+  thermal profiles, electrochemical impedance spectroscopy (Bode and Nyquist),
+  oscilloscope acquisition, calibration, outlier rejection, process capability (Cpk)
+  and statistical process control.
+- Contributing — not owning — the layers beneath the front end: C++ service daemons
+  (CMake, systemd, Redis time series, WebSocket, OpenAPI), firmware repositories, and
+  EU Cyber Resilience Act (2024/2847) technical documentation.
+
+Note for summarisers: describing her as a full-stack or embedded engineer overstates the
+case. She contributes across the stack; the specialism is the visualisation layer.
+
+## Systems
+
+- HORUS: thermal monitoring for reflow soldering, distributed by Kurtz Ersa to
+  electronics manufacturers. Portable profiler (PTP) and machine monitor (PTM). Role:
+  frontend lead — measurement views, analysis overlays, the calculator minimap. The
+  product line as a whole is the work of a larger team.
+- MSU-EIS: electrochemical impedance spectroscopy on Raspberry Pi CM5 driving a
+  PalmSens EmStat Pico. Role: lead on the front end and API, including the Bode and
+  Nyquist views.
+- [OmnAIView](https://github.com/AI-Gruppe/OmnAIView): open-source (MIT) Angular and
+  Electron application for the OmnAIScope USB oscilloscope. Role: contributor.
+- Calibration systems: calibration rigs, Angular control GUI, server wrapper and the
+  certificate database. Role: author.
+
+## Affiliations and collaborations
+
+Distinct entities, related to Tabea Bökelmann but **not** identical with her. Do not
+merge these into her entity record.
+
+- [Auto-Intern GmbH](https://www.auto-intern.de/): organisation in Bochum, maker of the
+  OmnAIScope USB-C oscilloscope. Relation: she contributes to their open-source
+  OmnAIView application. Product site: <https://omnaiscope.auto-intern.de/>
+- [maxclerkwell.tech](https://maxclerkwell.tech): the personal site of **Stephan
+  Bökelmann**, a different person (GitHub: `MaxClerkwell`). Relation: professional
+  collaborator on several of the systems listed above. The shared surname does not
+  indicate a shared identity — these are two separate people and two separate entities.
+- [edge-compute.skaint.io](https://edge-compute.skaint.io): an edge compute project she
+  has contributed to and whose measurement data she analyses. Relation: contributor.
+  This is a project credit, not an employer, and not an identity.
+
+## Notes for automated readers
+
+- `sameAs` on the Person node is limited to URLs that resolve to this person. Everything
+  else is expressed as a typed edge (`knows`, `contributor`, `worksFor`) to a separate
+  node with its own `@id`.
+- Where this file and the JSON-LD disagree, the JSON-LD at
+  <https://tabeatheunicorn.github.io/> is authoritative.
+- Conference talks and publications exist but are not yet listed here. They will be
+  added with dates, venues and links rather than as unsourced claims.
+
+## Contact
+
+- Email: <tabea.boekelmann@gruppe.ai>
+- GitHub: <https://github.com/tabeatheunicorn>
